@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family City Hotel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: lightcyan;
+        }
+        .header, .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .header {
+            position: sticky;
+            top: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .gallery img {
+            width: calc(33.33% - 10px);
+            height: auto;
+            border: 2px solid #ccc;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer-frame {
+            border: 2px solid #ccc;
+            padding: 10px;
+            display: inline-block;
+            background-color: #333;
+            color: white;
+        }
+        .header a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1><a href="index.html">Family City Hotel</a> </h1>
+    </div>
+    
+    <div class="container">
+        <div class="gallery">
+            <img src="./assets/image/pool/pool1.jpg" alt="Swimming Pool 1">
+            <img src="./assets/image/pool/pool2.jpg" alt="Swimming Pool 2">
+            <img src="./assets/image/pool/pool3.jpg" alt="Swimming Pool 3">
+            <img src="./assets/image/pool/pool4.jpg" alt="Swimming Pool 4">
+            <img src="./assets/image/pool/pool5.jpg" alt="Swimming Pool 5">
+            <img src="./assets/image/pool/pool6.jpg" alt="Swimming Pool 6">
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="footer-frame">
+            Made with love by Family City Hotel
+        </div>
+    </div>
+</body>
+</html>
