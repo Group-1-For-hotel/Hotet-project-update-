@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservation</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/booking.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html" class="main-gyi">FAMILY CITY HOTEL</a></div>
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./privacy-policy.html">About</a></li>
+                <li><a href="./index.html#room">Rooms</a></li>
+                <li><a href="./index.html#contact">Contact</a></li>
+
+            </div>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    </header>
+    <div id="booking">
+        <h2>Book Your Stay</h2>
+        <form id="booking-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="checkin">Check-In Date:</label>
+            <input type="date" id="checkin" name="checkin" required>
+            
+            <label for="checkout">Check-Out Date:</label>
+            <input type="date" id="checkout" name="checkout" required>
+            
+            <label for="time">Time</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" required>
+            
+            <button type="submit" value="Book Now" id="submit">Make Reservation</button>
+        </form>
+        <div id="display">
+            <p id="dis-name"></p>   
+            <p id="dis-email"></p>
+            <p id="dis-in-date"></p>
+            <p id="dis-out-date"></p>
+            <p id="dis-time"></p>
+            <p id="dis-guest"></p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; &hearts; 2024 Family City Hotel. All rights reserved.</p>
+    </footer>
+    
+        <script src="./assets/js/script.js"></script>
+</body>
+</html>

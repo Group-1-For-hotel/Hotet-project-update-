@@ -1,0 +1,51 @@
+#booking {
+    padding: 50px;
+    text-align: center;
+    background-color: #ffffff;
+    /* background-image: url('/assets/image1/booking.jpg');
+    background-size: cover; */
+    background-color: antiquewhite;
+}
+
+#booking h2 {
+    margin-bottom: 20px;
+}
+
+#booking form {
+    display: inline-block;
+    text-align: left;
+}
+
+#booking label {
+    display: block;
+    margin: 10px 0;
+}
+
+#booking input[type="text"],
+#booking input[type="email"],
+#booking input[type="date"],
+#booking input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#booking [type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#booking button[type="submit"]:hover {
+    background: #555;
+}
+#booking p{
+    font-size: 30px;
+}
