@@ -20,21 +20,6 @@ function calculateTotal() {
     
     document.getElementById('total-amount').value = totalAmount.toFixed(2);
 }
-
-function initMap() {
-    const hotelLocation = { lat: -25.363, lng: 131.044 }; // Replace with your hotel's latitude and longitude
-    const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 15,
-        center: hotelLocation,
-    });
-    const marker = new google.maps.Marker({
-        position: hotelLocation,
-        map: map,
-    });
-}
-
-
-
 // reservation
 
 document.getElementById('booking-form').addEventListener('submit',function(event){
