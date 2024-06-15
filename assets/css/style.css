@@ -337,3 +337,24 @@ footer {
     padding: 10px;
     border-top: 1px solid #ccc; /* Optional: adds a top border for separation */
 }
+
+
+
+
+#room-details {
+    padding: 2rem;
+}
+
+#room-details h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.room-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.room-info ul li {
+    margin-bottom: 0.5rem;
+}
