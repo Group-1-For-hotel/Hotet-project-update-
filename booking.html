@@ -30,9 +30,126 @@
             </div>
         </nav>
     </header>
+    <!-- <section class="booking-form">
+        <div class="form-header">
+            <h2>Book a Room</h2>
+        </div>
+        <form id="bookingForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="roomType">Room Type:</label>
+                <select id="roomType" name="roomType" required>
+                    <option value="Single Room">Single Room - $200</option>
+                    <option value="Double Room">Double Room - $300</option>
+                    <option value="Master Room">Master Room - $400</option>
+                    <option value="Family Room">Family Room - $500</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="roomNumber">Room Number:</label>
+                <input type="text" id="roomNumber" name="roomNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="checkInDate">Check-in Date:</label>
+                <input type="date" id="checkInDate" name="checkInDate" required>
+            </div>
+            <div class="form-group">
+                <label for="checkInTime">Check-in Time:</label>
+                <input type="time" id="checkInTime" name="checkInTime" required>
+            </div>
+            <div class="form-group">
+                <label for="checkOutTime">Check-out Time:</label>
+                <input type="time" id="checkOutTime" name="checkOutTime" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Book Now</button>
+            </div>
+        </form>
+    </section> -->
+
+    <section class="booking-form">
+        <div class="form-header">
+            <h2>Book a Room</h2>
+        </div>
+        <form id="bookingForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="roomType">Room Type:</label>
+                <select id="roomType" name="roomType" required>
+                    <option value="Single Room">Single Room - $200</option>
+                    <option value="Double Room">Double Room - $300</option>
+                    <option value="Master Room">Master Room - $400</option>
+                    <option value="Family Room">Family Room - $500</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="roomNumber">Room Number:</label>
+                <input type="text" id="roomNumber" name="roomNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="checkInDate">Check-in Date:</label>
+                <input type="date" id="checkInDate" name="checkInDate" required>
+            </div>
+            <div class="form-group">
+                <label for="checkInTime">Check-in Time:</label>
+                <input type="time" id="checkInTime" name="checkInTime" required>
+            </div>
+            <div class="form-group">
+                <label for="checkOutTime">Check-out Time:</label>
+                <input type="time" id="checkOutTime" name="checkOutTime" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Book Now</button>
+            </div>
+        </form>
+        <h2><strong><marquee class="text-7xl" behavior="" direction="">If you inform us that you will not be able to come within 24 hours of booking, we will refund 50% of the amount paid.👫</marquee></strong>
+        </h2>
+    </section>
+    
+    
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const checkInDate = new Date(document.getElementById('checkInDate').value);
+            const checkInTime = document.getElementById('checkInTime').value;
+            const checkOutTime = document.getElementById('checkOutTime').value;
+            
+            const [checkInHour, checkInMinute] = checkInTime.split(':');
+            const [checkOutHour, checkOutMinute] = checkOutTime.split(':');
+            
+            const checkInDateTime = new Date(checkInDate.setHours(checkInHour, checkInMinute));
+            const checkOutDateTime = new Date(checkInDateTime);
+            checkOutDateTime.setHours(checkOutHour, checkOutMinute);
+    
+            const differenceInHours = (checkOutDateTime - checkInDateTime) / 36e5;
+    
+            if (differenceInHours !== 24) {
+                alert('The booking duration must be exactly 24 hours.');
+                return;
+            }
+    
+            alert('Room booked successfully!');
+        });
+    </script>
+    
 
     </header>
-    <div id="booking">
+    <!-- <div id="booking">
         <h2>Book Your Stay</h2>
         <form id="booking-form">
             <label for="name">Name:</label>
@@ -63,7 +180,7 @@
             <p id="dis-time"></p>
             <p id="dis-guest"></p>
         </div>
-    </div>
+    </div> -->
     
     <footer>
         <p>&copy; &hearts; 2024 Family City Hotel. All rights reserved.</p>
