@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightslategray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        .booking-form {
+            background-color: lightcyan;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            margin: 20px 0;
+        }
+        .booking-form h1 {
+            text-align: center;
+            color: green;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: black;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: navy;
+        }
+        #totalAmount {
+            font-weight: bold;
+            color: navy;
+            text-align: center;
+            margin-top: 10px;
+            border: 2px solid gold;
+            /* background-color: lawngreen; */
+            padding: 5px;
+            border-radius: 15px;
+        }
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+            nav a {
+                padding: 10px;
+                width: 100%;
+                text-align: center;
+            }
+            .booking-form {
+                padding: 15px;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="booking-form">
+        <h1>Family City Hotel Booking Form</h1>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="roomType">Room Type:</label>
+            <select id="roomType" name="roomType">
+                <option value="Single Room">Single Room - $100 per night</option>
+                <option value="Double Room">Double Room - $200 per night</option>
+                <option value="Master Room">Master Room - $300 per night</option>
+                <option value="Family Room">Family Room - $400 per night</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="checkInDate">Check-In Date:</label>
+            <input type="date" id="checkInDate" name="checkInDate">
+        </div>
+        <div class="form-group">
+            <label for="checkOutDate">Check-Out Date:</label>
+            <input type="date" id="checkOutDate" name="checkOutDate">
+        </div>
+        <div class="form-group">
+            <button type="button" onclick="bookNow()">Book Now</button>
+        </div>
+        <div class="form-group">
+            <label for="totalAmount">Total Amount:</label>
+            <div id="totalAmount">$0</div>
+        </div>
+    </div>
+
+    <script>
+        function calculateTotal() {
+            const roomType = document.getElementById('roomType').value;
+            const checkInDate = new Date(document.getElementById('checkInDate').value);
+            const checkOutDate = new Date(document.getElementById('checkOutDate').value);
+
+            const oneDay = 24 * 60 * 60 * 1000;
+            const diffDays = Math.round(Math.abs((checkOutDate - checkInDate) / oneDay));
+
+            const roomPrices = {
+                "Single Room": 100,
+                "Double Room": 200,
+                "Master Room": 300,
+                "Family Room": 400
+            };
+
+            const totalAmount = diffDays * roomPrices[roomType];
+
+            return totalAmount;
+        }
+
+        function bookNow() {
+            const totalAmount = calculateTotal();
+            document.getElementById('totalAmount').innerText = '$' + totalAmount;
+            alert('Booking successful! Total amount: $' + totalAmount);
+        }
+    </script>
+    <footer>
+        <p>&copy; 2024 Family City Hotel. All rights reserved.</p>
+    </footer>
+</body>
+</html>
