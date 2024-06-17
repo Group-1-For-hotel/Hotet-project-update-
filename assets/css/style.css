@@ -100,70 +100,17 @@ header .burger div {
     border-radius: 10px;
 }
 
-.panna img:hover {
-    transform: scale(1.2);
-}
-
-
-.jo img:hover {
-    transform: scale(1.2);
-}
-
-.si img:hover {
-    transform: scale(1.2);
-}
-
-.le img:hover {
-    transform: scale(1.2);
-}
-
-.do img:hover {
-    transform: scale(1.2);
-}
-
-.d img:hover {
-    transform: scale(1.2);
-}
-
-.ub img:hover {
-    transform: scale(1.2);
-}
-
-.ro img:hover {
-    transform: scale(1.2);
-}
-
-.g img:hover {
-    transform: scale(1.2);
-}
-
-.h img:hover {
-    transform: scale(1.2);
-}
-
-.i img:hover {
-    transform: scale(1.2);
-}
-
-.j img:hover {
-    transform: scale(1.2);
-}
-
-.if img:hover {
-    transform: scale(1.3);
-}
-
-.fa img:hover {
-    transform: scale(1.3);
-}
-
-.mi img:hover {
-    transform: scale(1.3);
-}
-
-.ly img:hover {
-    transform: scale(1.3);
-}
+.room .two-room{
+    display: none;
+  }
+  
+  .room:hover .one-room{
+    display: none;
+  }
+  
+  .room:hover .two-room{
+    display: inline;
+  }
 
 .room-headers {
     display: flex;
