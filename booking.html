@@ -29,7 +29,7 @@
     </header>
 
     <div class="booking-form" id="booking-form">
-        <h1>Family City Hotel Booking Form</h1>
+        <h1>Hotel Booking Form</h1>
         <form id="form" onsubmit="return handleSubmit(event)">
             <div class="form-group">
                 <label for="name">Name:</label>
@@ -38,6 +38,10 @@
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone-number">Phone Number:</label>
+                <input type="phone-number" id="number" name="phone-number" required>
             </div>
             <div class="form-group">
                 <label for="roomType">Room Type:</label>
@@ -69,6 +73,7 @@
     <div id="display" style="display:none;">
         <p id="dis-name"></p>
         <p id="dis-email"></p>
+        <p id="dis-phone-number"></p>
         <p id="dis-room-type"></p>
         <p id="dis-in-date"></p>
         <p id="dis-out-date"></p>

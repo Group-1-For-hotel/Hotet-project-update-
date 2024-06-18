@@ -45,6 +45,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
     event.preventDefault();
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
+    const phone = document.getElementById('number').value;
     const roomType = document.getElementById('roomType').value;
     const checkin = document.getElementById('checkInDate').value;
     const checkout = document.getElementById('checkOutDate').value;
@@ -52,6 +53,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
 
     document.getElementById('dis-name').innerHTML = `Name: ${name}`;
     document.getElementById('dis-email').innerHTML = `Email: ${email}`;
+    document.getElementById('dis-phone-number').innerHTML = `Phone Number: ${phone}`;
     document.getElementById('dis-room-type').innerHTML = `Room Type: ${roomType}`;
     document.getElementById('dis-in-date').innerHTML = `Check-In Date: ${checkin}`;
     document.getElementById('dis-out-date').innerHTML = `Check-Out Date: ${checkout}`;
