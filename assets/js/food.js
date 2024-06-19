@@ -51,6 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+
+localStorage.setItem(confirmOrderBtn);
+
+
+
     // Burger menu functionality
     const burger = document.querySelector('.burger');
     const navLinks = document.querySelector('.nav-links');
