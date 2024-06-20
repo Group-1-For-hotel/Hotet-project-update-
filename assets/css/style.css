@@ -239,6 +239,7 @@ header .burger div {
     margin: 10px 0;
     font-size: 1.2rem;
     color: #333;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
